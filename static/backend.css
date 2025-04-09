@@ -1,0 +1,121 @@
+body {
+    font-size: 3vw;
+    background-image: none;
+}
+
+h1 {
+    font-size: 3vw;
+}
+
+
+.game_board pre {
+    font-size: clamp(.8rem, 1vw, 3rem); /* Text scales dynamically */
+    min-width: 80px;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+/* backend stuff */
+.question-text {
+    font-family: inherit;
+    text-align: center;
+    text-shadow: black 4px 4px 4px;
+    margin: 0;
+}
+
+
+.control-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+
+.start {
+    color: greenyellow;
+}
+
+#next-question {
+    color: #22a922;
+}
+#last-question {
+    color: #a95a22 !important;
+}
+
+
+.strikes {
+    color: red;
+}
+#strikes {
+    color: lightcoral !important;
+    margin: 0 !important;
+}
+#strikes:hover {
+    cursor: not-allowed;
+    background-color: black !important;
+}
+
+.boys {
+    color: blue;
+}
+#Boys-Score {
+    color: mediumturquoise !important;
+    margin: 0 !important;
+    margin-block: 0;
+}
+#Boys-Score:hover {
+    cursor: not-allowed;
+    background-color: black !important;
+}
+
+.girls {
+    color: deeppink;
+}
+#Girls-Score {
+    color: mediumorchid !important;
+    margin: 0 !important;
+}
+#Girls-Score:hover {
+    cursor: not-allowed;
+    background-color: black !important;
+}
+
+.buzzer {
+    color: purple;
+}
+#player_that_buzzed {
+    color: mediumpurple !important;
+    margin: 0 !important;
+}
+#player_that_buzzed:hover {
+    cursor: not-allowed;
+    background-color: black !important;
+
+}
+
+
+
+
+
+
+.update-buttons-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1vw;
+    width: 90%;
+    max-width: 800px;
+    margin: auto;
+}
+
+.update{
+    color: yellow;
+    text-align: center;
+    max-width: fit-content;
+}

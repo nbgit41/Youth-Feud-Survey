@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Control</title>
+        <link rel="stylesheet" type="text/css" href="/static/global.css">
+        <link rel="stylesheet" type="text/css" href="/static/backend.css">
+    </head>
+    <body>
+
+        <div class="vignette"></div>
+
+        <h1 class="question-text" id="question-text"></h1>
+
+        <div class="control-buttons" id="control-buttons">
+            <button id="restart-button" class="start" onclick="startGame()">Start</button>
+
+            <button id="next-question" class="question" onclick="nextQuestionPlzBro()">Next Question</button>
+            <button id="last-question" class="question" onclick="waitNoGoBack()">Last Question</button>
+
+            <button id="add-strikes" class="strikes" onclick="addAStrikePlz()">Add Strike</button>
+            <button id="sub-strikes" class="strikes" onclick="subtractAStrikePlz()">Remove Strike</button>
+            <button id="reset-strikes" class="strikes" onclick="resetStrikesPlz()">Reset Strikes</button>
+            <button id="strikes" class="strikes"></button>
+
+            <button id="boys-up" class="boys" onclick="updateScore('boys', 1)">Boys +1</button>
+            <button id="boys-up5" class="boys" onclick="updateScore('boys', 5)">Boys +5</button>
+            <button id="boys-up10" class="boys" onclick="updateScore('boys', 10)">Boys +10</button>
+            <button id="boys-down" class="boys" onclick="updateScore('boys', -1)">Boys -1</button>
+            <button id="boys-down5" class="boys" onclick="updateScore('boys', -5)">Boys -5</button>
+            <button id="boys-down10" class="boys" onclick="updateScore('boys', -10)">Boys -10</button>
+            <button id="Boys-Score" class="boys"></button>
+
+            <button id="girls-up" class="girls" onclick="updateScore('girls', 1)">Girls +1</button>
+            <button id="girls-up5" class="girls" onclick="updateScore('girls', 5)">Girls +5</button>
+            <button id="girls-up10" class="girls" onclick="updateScore('girls', 10)">Girls +10</button>
+            <button id="girls-down" class="girls" onclick="updateScore('girls', -1)">Girls -1</button>
+            <button id="girls-down5" class="girls" onclick="updateScore('girls', -5)">Girls -5</button>
+            <button id="girls-down10" class="girls" onclick="updateScore('girls', -10)">Girls -10</button>
+            <button id="Girls-Score" class="girls"></button>
+
+            <button id="reset-buzzer" class="buzzer" onclick="resetithTheBuzzerFunction()">Reset Buzzer</button>
+            <button id="player_that_buzzed" class="buzzer"></button>
+
+            <button id="update" class="update" onclick="forceUpdateAllTheThings()">Force Update</button>
+
+        </div>
+
+        <div class="game_board" id="backend-game-board"></div>
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.4/socket.io.js"></script>
+        <script src="/static/backend.js"></script>
+
+    </body>
+</html>

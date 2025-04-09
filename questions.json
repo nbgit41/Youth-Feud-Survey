@@ -1,0 +1,23 @@
+{
+    "Welcome to Youth Group Feud!": [
+        {
+            "text": "hi",
+            "points": "0"
+        },
+        {
+            "text": "example",
+            "points": "0"
+        },
+        {
+            "text": "AnswerMcAnswer Face",
+            "points": "0"
+        }
+    ],
+    "Question goes here": [
+        {
+            "text": "answer goes here",
+            "points": 9
+        }
+    ],
+    "Thanks for Playing!": [ ]
+}

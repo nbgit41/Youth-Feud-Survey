@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Answers</title>
+        <link rel="stylesheet" type="text/css" href="/static/global.css">
+        <link rel="stylesheet" type="text/css" href="/static/backend_answers.css">
+    </head>
+    <body>
+        <div class="vignette"></div>
+
+        <h1 class="question-text" id="question-text"></h1>
+
+        <div class="game_board"></div>
+        <br><br>
+
+        <div class="control-buttons" id="control-buttons">
+        <button id="update" class="update" onclick="forceUpdateAllTheThings()">Force Update</button>
+        <button id="next-question" class="question" onclick="nextQuestionPlzBro()">Next Question</button>
+        <button id="last-question" class="question" onclick="waitNoGoBack()">Last Question</button>
+
+        <button id="strikes" class="strikes">Strikes: 0</button>
+        <button id="Boys-Score" class="boys">Boys: 0</button>
+        <button id="Girls-Score" class="girls">Girls: 0</button>
+        <button id="player_that_buzzed" class="buzzer">Player Who Buzzed</button>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.4/socket.io.js"></script>
+        <script src="/static/backend_answers.js"></script>
+    </body>
+</html>

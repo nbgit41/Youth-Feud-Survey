@@ -1,0 +1,91 @@
+/* global stuff */
+@font-face {
+    font-family: 'opendyslexicregular';
+    src: url('/static/fonts/opendyslexic-regular-webfont.woff2') format('woff2'),
+    url('/static/fonts/opendyslexic-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    background-color: #454545;
+    color: white;
+    font-family: opendyslexicregular, Arial, sans-serif;
+    text-align: center;
+    height: 100%;
+}
+
+body {
+    background-image: url('Youth Group Feud Fancy.png');
+    background-size: calc(75vw);
+    background-position: center center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents repeating */
+    height: 100vh; /* Full viewport height */
+    margin: 0; /* Removes default margin */
+
+}
+
+
+/* Vignette effect */
+.vignette {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 200px rgba(0,0,0,0.9) inset;
+    z-index: -2; /* Puts the vignette under everything */
+}
+
+pre {
+    background-color: #222;
+    border-radius: 15px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #454545;
+    box-shadow: black 5px 5px 20px 1px;
+    font-family: inherit;
+    min-width: 30vw;
+    margin: 0em;
+}
+
+/* all buttons */
+button {
+    color: white;
+    /*font-size: 1.5em;*/
+    font-family: inherit;
+    background-color: black;
+    border: 5px solid #454545;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    white-space: nowrap;
+    /*min-width: 100px;*/
+    box-shadow: black 5px 5px 20px 1px;
+    font-size: clamp(12px, 1.2vw, 24px); /* Adjusts size based on screen */
+    padding: 10px 15px; /* Prevents text from touching edges */
+    min-width: 120px; /* Ensures reasonable width */
+    text-align: center;
+}
+
+button:hover {
+    background-color: #505050;
+}
+
+
+.game_board {
+    display: inline-grid;
+    gap: 1vh;
+    width: 100%;
+    max-height: 70vh;
+    max-width: 90vw;
+    height: auto;
+    margin: 4vw;
+}
+
+.flipped {
+    background-color: blue !important;
+    color: white;
+}
+

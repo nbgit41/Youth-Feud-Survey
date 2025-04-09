@@ -1,0 +1,37 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    font-family: 'opendyslexicregular', Arial, sans-serif;
+}
+
+.buzzer {
+    flex: 1;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 2em;
+    color: white;
+    font-family: inherit;
+    text-shadow: 4px 4px 10px black;
+}
+
+.left {
+    background-color: rgb(195, 94, 94);
+}
+
+.right {
+    background-color: rgb(71, 158, 71);
+}
+
+.buzzed {
+    background-color: yellow !important;
+}
+
+
+.inactive {
+    background-color: grey;
+}

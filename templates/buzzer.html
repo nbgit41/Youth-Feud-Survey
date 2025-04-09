@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Buzzer</title>
+        <link rel="stylesheet" type="text/css" href="/static/buzzer.css">
+    </head>
+    <body>
+    <div class="buzzer left" onclick="buzz('Player 1')">Player 1</div>
+    <div class="buzzer right" onclick="buzz('Player 2')">Player 2</div>
+    <script>
+        function buzz(player) {
+            // Send the buzz event to the server
+            fetch('/buzz', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ player: player })
+            }).catch(error => console.error("Error sending buzz:", error));
+
+            // Highlight the buzzer
+            if (player === 'Player 1') {
+                document.querySelector('.buzzer.left').classList.add('buzzed');
+            } else if (player === 'Player 2') {
+                document.querySelector('.buzzer.right').classList.add('buzzed');
+            }
+        }
+
+        function updateFromServer() {
+            // Periodically fetch the buzzer status from the server
+            fetch('/status')
+                .then(response => response.json())
+                .then(data => {
+                    const playerBuzzed = data.player;
+                    if (playerBuzzed === 'Player 1') {
+                        document.querySelector('.buzzer.left').classList.add('buzzed');
+                        document.querySelector('.buzzer.right').classList.remove('buzzed');
+                    } else if (playerBuzzed === 'Player 2') {
+                        document.querySelector('.buzzer.right').classList.add('buzzed');
+                        document.querySelector('.buzzer.left').classList.remove('buzzed');
+                    } else {
+                        document.querySelector('.buzzer.left').classList.remove('buzzed');
+                        document.querySelector('.buzzer.right').classList.remove('buzzed');
+                    }
+                })
+                .catch(error => console.error("Error fetching status:", error));
+        }
+
+        // Poll the server every second to update the UI
+        setInterval(updateFromServer, 100);
+    </script>
+    </body>
+</html>

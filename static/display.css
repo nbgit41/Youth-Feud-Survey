@@ -1,0 +1,75 @@
+/* display stuff */
+.question-text {
+    font-family: inherit;
+    text-align: center;
+    text-shadow: black 4px 4px 4px;
+    margin: 0;
+    font-size: 4.5em;
+}
+
+.game_board pre {
+    background-color: #222;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    font-size: 2vw;
+    min-width: 100px;
+    min-height: 50px;
+}
+
+.strikes {
+    position: fixed;
+    left: 0;
+    bottom: -222px;
+    font-size: 8em !important;
+    margin: 0 !important;
+}
+
+.scores {
+    display: grid;
+    grid-template-columns: 0fr 0fr;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    font-size: 6em !important;
+    row-gap: 1px;
+    column-gap: 70px;
+}
+
+.scores h3{
+    margin: 0 !important;
+    font-size: 1em !important;
+}
+
+.buzzed_player {
+    font-size: 4em !important;
+    position: fixed;
+    bottom: 10%;
+    width: 100vw;
+}
+
+#Boys-Score {
+    color: blue !important;
+}
+
+#boys {
+    color: blue !important;
+}
+
+#Girls-Score {
+    color: deeppink !important;
+}
+
+#girls {
+    color: deeppink !important;
+}
+
+#strikes {
+    color: red !important;
+}
+
+#restart-button {
+    font-size: 4em !important;
+    text-align: center !important;
+    /*display: inline;*/
+}
